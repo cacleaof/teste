@@ -22,7 +22,7 @@ class CreateHistoricsTable extends Migration
             $table->double('total_before', 10, 2);
             $table->double('total_after', 10, 2);
             $table->integer('user_id_transaction')->nullable();
-            $table->data('date');
+            $table->date('date');
             $table->timestamps();
         });
     }
