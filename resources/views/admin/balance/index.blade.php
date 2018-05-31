@@ -16,10 +16,15 @@
 	<div class="box">
 		<div class="box-header">
 			<a href="{{ route('balance.deposit')}}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Recarregar</a>
-			<a href="" class="btn btn-danger"><i class="fas fa-cart-arrow-down" aria-hidden="true"></i> Sacar</a>
-			Header 
+      @if ($amount > 0)
+			<a href="{{ route('balance.withdraw') }}" class="btn btn-danger"><i class="fas fa-cart-arrow-down" aria-hidden="true"></i> Sacar</a>
+      @endif
+        @if ($amount > 0)
+      <a href="{{ route('balance.transfer') }}" class="btn btn-info"><i class="fa fa-exchange" aria-hidden="true"></i> Transferir</a>
+      @endif
 		</div>
 		<div class="box-body">
+            @include('admin.includes.alerts')
 				<div class="small-box bg-green">
             		<div class="inner">
              	 	<h3>R$ {{ number_format($amount, 2, ',', '.') }}</h3>
