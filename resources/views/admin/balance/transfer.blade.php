@@ -3,7 +3,7 @@
 @section('title', 'Transferir Saldo')
 
 @section('content_header')
-    <h1>Fazer Transferencia</h1>
+    <h1>Fazer Transferencia entre Usuários</h1>
 
     <ol class='breadcrumb'>
     	<li><a ref="">Dashboard</a></li>
@@ -20,14 +20,15 @@
 		<div class="box-body">
 			@include('admin.includes.alerts')
 
-				<form method="POST" action="{{ route('confirm-transfer') }}">
+				<form method="POST" action="{{ route('confirm.transfer') }}">
 					{!! csrf_field() !!}
 
 					<div class="form-group">
-						<input type="texto" name="sender" placeholder="Informar quem vai receber a Transferencia" class "form-control">
+						<input type="texto" name="sender" placeholder="Informar quem vai receber a Transferencia" class="form-control">
 					</div>
 					<div class="form-group">
-						<button type="submit" class "btn btn-success"->Proxima Etapa</button>
+						<button type="submit" class="btn btn-success"->Proxima Etapa</button>
+					</div>
 				</form>
 		</div>
 	</div>

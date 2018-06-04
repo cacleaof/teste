@@ -27,7 +27,7 @@
 						<input type="texto" name="value" placeholder="valor recarga" class "form-control">
 					</div>
 					<div class="form-group">
-						<button type="submit" class "btn btn-success"->Recarregar</button>
+						<button type="submit" class="btn btn-success">Recarregar</button>
 				</form>
 		</div>
 	</div>

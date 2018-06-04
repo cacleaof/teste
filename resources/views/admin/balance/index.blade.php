@@ -19,7 +19,8 @@
       @if ($amount > 0)
 			<a href="{{ route('balance.withdraw') }}" class="btn btn-danger"><i class="fas fa-cart-arrow-down" aria-hidden="true"></i> Sacar</a>
       @endif
-        @if ($amount > 0)
+      
+      @if ($amount > 0)
       <a href="{{ route('balance.transfer') }}" class="btn btn-info"><i class="fa fa-exchange" aria-hidden="true"></i> Transferir</a>
       @endif
 		</div>
