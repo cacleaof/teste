@@ -21,6 +21,8 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'admin', 'prefix' => 'adm
 
 });
 
+	$this->post('atualizar-perfil', 'Admin\UserControl@profileUpdate')->name('profile.update')->middleware('auth');
+
 	$this->get('meu-perfil', 'Admin\UserControl@profile')->name('profile')->middleware('auth');
 
 	$this->get('/', 'Site\SiteController@index')->name('home');
