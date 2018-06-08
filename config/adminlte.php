@@ -140,7 +140,7 @@ return [
            'icon' => 'money',
            'submenu'  =>  [
                 [
-                    'text'        => 'Saldo',
+                    'text'        => 'Teleconsultoria',
                     'url'         => 'admin/balance',
                     'icon'        => 'credit-card-alt'
                 ],
