@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Teleconsultoria')
+@section('title', 'Saldo')
 
 @section('content_header')
     <h1>Saldo</h1>
 
     <ol class="breadcrumb">
     	<li><a href="">Dashboard</a></li>
-    	<li><a href="">Teleconsultoria</a></li>
+    	<li><a href="">Saldo</a></li>
     </ol>
      
 @stop
@@ -17,11 +17,11 @@
 		<div class="box-header">
 			<a href="{{ route('balance.deposit')}}" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Solicitação</a>
       @if ($amount > 0)
-			<a href="{{ route('balance.withdraw') }}" class="btn btn-danger"><i class="fas fa-cart-arrow-down" aria-hidden="true"></i> Teleconsultoria</a>
+			<a href="{{ route('balance.withdraw') }}" class="btn btn-danger"><i class="fas fa-cart-arrow-down" aria-hidden="true"></i>Resposta</a>
       @endif
       
       @if ($amount > 0)
-      <a href="{{ route('balance.transfer') }}" class="btn btn-info"><i class="fa fa-exchange" aria-hidden="true"></i> Teleregular</a>
+      <a href="{{ route('balance.transfer') }}" class="btn btn-info"><i class="fa fa-exchange" aria-hidden="true"></i> Regulação</a>
       @endif
 		</div>
 		<div class="box-body">

@@ -111,17 +111,17 @@ return [
         //'MENU',
         [
             'text'        => 'Caixa de Entrada',
-            'url'         => 'admin',
+            'url'         => '/post',
             'icon'        => 'envelope',
         ],
         [
             'text'        => 'Caixa de Saida',
-            'url'         => 'admin',
+            'url'         => '/saida',
             'icon'        => 'envelope',
         ],
         [
             'text'        => 'Caixa de Finalizadas',
-            'url'         => 'admin',
+            'url'         => '/fim',
             'icon'        => 'envelope',
         ],
         [

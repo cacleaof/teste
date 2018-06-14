@@ -17,6 +17,8 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'admin', 'prefix' => 'adm
 	$this->get('deposit', 'BalanceController@deposit')->name('balance.deposit');
 	$this->get('balance', 'BalanceController@index')->name('admin.balance');
 
+	$this->get('balance', 'BalanceController@index')->name('admin.balance');
+
 	$this->get('/', 'AdminController@index')->name('admin.home');
 
 });
@@ -26,6 +28,14 @@ $this->group(['middleware' => ['auth'], 'namespace' => 'admin', 'prefix' => 'adm
 	$this->get('meu-perfil', 'Admin\UserControl@profile')->name('profile')->middleware('auth');
 
 	$this->get('/', 'Site\SiteController@index')->name('home');
+
+	$this->get('/post', 'Site\SiteController@post')->name('admin.home.post');
+
+	$this->get('/saida', 'Site\SiteController@saida')->name('admin.home.saida');
+
+	$this->get('/fim', 'Site\SiteController@fim')->name('admin.home.fim');
+	//Route::get('/post', function(){
+	//	return view('post');});
 
 	Auth::routes();
 
